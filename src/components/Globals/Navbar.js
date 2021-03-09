@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import {Link} from 'gatsby'
 import logo from "../../images/coffee.png"
-import {FaCart, FaCartArrowDown} from "react-icons/fa"
+import { FaCartArrowDown} from "react-icons/fa"
 
 
 export default class Navbar extends Component {
@@ -22,8 +22,10 @@ export default class Navbar extends Component {
         ]
     };
      navbarHandler = () => {
-         this.state.navbarOpen?this.setState({navbarOpen:false, css:"collapse navbar-collapse"})
-         :this.setState({
+         this.state.navbarOpen
+         ? this.setState({navbarOpen:false, 
+            css:"collapse navbar-collapse"})
+         : this.setState({
              navbarOpen: true,
              css: "collapse navbar-collapse show"
          });
@@ -62,6 +64,6 @@ export default class Navbar extends Component {
 
 </div>
             </nav>
-        )
+        );
     }
 }
